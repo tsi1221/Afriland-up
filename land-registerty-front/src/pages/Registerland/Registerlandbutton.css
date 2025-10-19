@@ -1,0 +1,117 @@
+/* =============================
+   Trigger Button
+============================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+  z-index: 1;
+}
+
+.btn.blue {
+  background-color: #2563eb;
+  color: white;
+}
+
+.btn.blue:hover {
+  background-color: #1e40af;
+  transform: scale(1.05);
+}
+
+/* =============================
+   Modal Overlay
+============================= */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4); /* slightly dark for visibility */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  backdrop-filter: blur(3px);
+  padding: 20px; /* allow spacing on small screens */
+  overflow-y: auto; /* scroll if viewport is too small */
+}
+
+/* =============================
+   Modal Card
+============================= */
+.modal-card {
+  background: rgba(255, 255, 255, 0.97);
+  border-radius: 16px;
+  width: 435px;
+  max-width: 100%;
+  height: 100vh; /* ensure it never exceeds viewport */
+  padding: 24px 18px 18px 18px; /* leave extra top padding for close button space */
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  /* overflow-y: auto; scroll inside modal */
+  /* animation: slideDown 0.3s ease-out; */
+}
+
+/* Slide-down animation */
+@keyframes slideDown {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* =============================
+   Close Button - above modal top
+============================= */
+.modal-close {
+  position: relative;
+  top: 4px; /* above the modal card */
+  right: -14px; /* outside top-right corner */
+  font-size: 21px;
+  font-weight: bold;
+  color: #1e293b;
+  background: #fff;
+  border-radius: 50%;
+  border: 2px solid #d1d5db;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: all 0.2s ease;
+}
+
+.modal-close:hover {
+  color: white;
+  background-color: #ef4444;
+  border-color: #ef4444;
+  transform: scale(1.1);
+}
+
+/* =============================
+   Responsive
+============================= */
+@media (max-width: 500px) {
+  .modal-card {
+    width: 100%;
+    max-height: 95vh;
+    padding: 20px 16px 16px 16px;
+  }
+
+  .modal-close {
+    font-size: 24px;
+    width: 34px;
+    height: 34px;
+    top: -12px;
+    right: -12px;
+  }
+}

@@ -1,0 +1,125 @@
+/* Header Styles */
+.hero-header {background-color: #1f2937;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 0.75rem; /* Rounded corners */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+/* Ensure content below header doesn't overlap */
+.hero-section {
+  padding-top: 6rem; /* Push down to avoid overlap with fixed header */
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Rounded logo */
+.logo-container .logo {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Blue button with bright hover */
+.wallet-button-container .wallet-button {
+  background-color: #2563eb; /* Blue */
+  color: white;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border: none; /* Ensures no border */
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  outline: none; /* Prevents black outline on click */
+}
+
+.wallet-button-container .wallet-button:hover {
+  background-color: #90EE90; /* Bright blue */
+  transform: scale(1.05);
+}
+
+/* Hero Headline */
+.hero-headline {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.2;
+   margin-top: 5.5rem;
+}
+
+.hero-headline .highlight {
+  color: #16a34a;
+}
+.footer{
+  margin-bottom:-4rem;
+}
+.customer{
+  margin-top: -8rem;
+}
+/* Subheading */
+.hero-subheading {
+  font-size: 1.25rem;
+  color: #4b5563;
+  max-width: 60%;
+  margin: 0 auto 3rem auto;
+  margin-top: 5rem;
+}
+
+.logoname{
+  color: white;
+  font-weight: bold;
+}
+/* Solution Cards */
+.solution-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  max-width: 90%;
+  margin: 0 auto;
+  margin-top: 6.5rem;
+}
+
+.solution-card {
+  background-color: white;
+  border: 1px solid #f3f4f6;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.solution-card:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+  border-color: #22c55e;
+  transform: translateY(-4px);
+}
+
+.solution-icon {
+  height: 24px;
+  width: 24px;
+  color: #22c55e;
+  margin-bottom: 0.75rem;
+  flex-shrink: 0;
+}
+
+.solution-text {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  line-height: 1.4;
+}

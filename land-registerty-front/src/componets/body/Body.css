@@ -1,0 +1,146 @@
+/* Root Container */
+.body-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #f9fafb;
+  font-family: "Inter", sans-serif;
+}
+
+/* Card Wrapper */
+.body-card {
+  width: 100%;
+  max-width: 1200px;
+  background: #ffffff;
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Grid Layout */
+.body-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .body-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Image Section */
+.body-image-wrapper {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .body-image-wrapper {
+    height: auto;
+  }
+}
+
+.body-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+}
+
+.body-image:hover {
+  transform: scale(1.05);
+}
+
+/* Text Section */
+.body-text-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .body-text-section {
+    padding: 4rem;
+  }
+}
+
+/* Title */
+.body-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 2rem;
+  line-height: 1.3;
+}
+
+@media (min-width: 640px) {
+  .body-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .body-title {
+    font-size: 3rem;
+  }
+}
+
+.highlight {
+  color: #2563eb; /* blue-600 */
+}
+
+/* Description */
+.body-description {
+  font-size: 1.125rem;
+  color: #6b7280;
+  margin-bottom: 2rem;
+  margin-top:-0.1rem;
+  max-width: 28rem;
+}
+
+/* Button */
+.get-started-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #2563eb;
+  border: none;
+  width:15rem;
+  border-radius: 9999px;
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.getstarted{
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 2rem;
+
+}
+
+.get-started-btn:hover {
+  background-color: #1e40af;
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(37, 99, 235, 0.4);
+}
+
+.get-started-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(147, 197, 253, 0.5);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
